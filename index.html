@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson-2</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+</head>
+
+<body class="bg-slate-400">
+
+    <form class="todo-form mx-auto w-[500px] bg-white p-5 rounded-md mt-3" autocomplete="off">
+        <input class="todo-input w-[80%] p-2 rounded-md outline-none border-[1px] border-black focus:border-blue-500" type="text"
+            placeholder="Add todo" name="Todo" required>
+        <button class="text-center font-semibold text-center bg-green-500 px-5 py-[9.5px] text-white rounded-md" type="submit">Add</button>
+    </form>
+    <ul class="todo-list mt-5 mx-auto w-[500px] p-5 rounded-md bg-white space-y-3"></ul>
+
+
+    <div class="modal-wrapper scale-0 fixed top-0 right-0 left-0 bottom-0 backdrop-blur duration-300" id="wrapper">
+        <div class="modal-inner w-[400px] h-[170px] bg-white absolute top-0 bottom-0 right-0 left-0  m-auto rounded-[20px] px-[30px] py-[30px]">
+          <!-- <form class="" autocomplete="off">
+            <h1 class="text-center text-[20px] font-bold">Edit Todo</h1>
+            <div class="mt-2">
+                <span>1.</span>
+                <input class="p-2 outline-none focus:border-[1px] focus:border-blue-500 rounded-md" type="text" placeholder="Title">
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md right-7 absolute">Save</button>
+          </form> -->
+        </div>
+
+
+    <script src="./main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
